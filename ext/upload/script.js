@@ -31,12 +31,9 @@ function updateTracker() {
                 if (toobig) {
                     lockbtn = true;
                     input.style = "color:red";
-                } else {
-                    input.style = "color:initial";
                 }
             } else {
                 if (cancelbtn) cancelbtn.style.visibility = "hidden";
-                input.style = "color:initial";
             }
         });
 
@@ -46,8 +43,6 @@ function updateTracker() {
         if (window.shm_max_total_size > 0 && size > window.shm_max_total_size) {
             lockbtn = true;
             tracker.style = "color:red";
-        } else {
-            tracker.style = "color:initial";
         }
     } else {
         tracker.innerText = "0MB";
